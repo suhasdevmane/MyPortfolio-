@@ -139,7 +139,7 @@ To run this project locally:
 git clone https://github.com/kunj2803/kunjdesai-portfolio.git
 
 # 2️⃣ Navigate to project directory
-cd kunjdesai-portfolio
+cd MyPortfolio-
 
 # 3️⃣ Install dependencies
 npm install
