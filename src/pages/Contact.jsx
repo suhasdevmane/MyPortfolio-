@@ -124,6 +124,9 @@ export default function Contact() {
         <strong style={{ color: "var(--accent)", marginTop: "0.5rem", display: "block" }}>
           📍 A/P: Randeviwadi, Tal: Kagal, Dist: Kolhapur, PIN: 416216, India
         </strong>
+        <strong style={{ color: "var(--accent)", marginTop: "0.5rem", display: "block" }}>
+          📍 Cardiff, United Kingdom, CF24 3AH
+        </strong>
         <strong style={{ color: "var(--accent)" }}>
           📞 +44 7765 529577 (Work)
         </strong>
