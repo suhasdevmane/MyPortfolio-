@@ -21,7 +21,7 @@ app.use(
 );
 
 // SPA fallback - serve index.html for all non-file routes
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
