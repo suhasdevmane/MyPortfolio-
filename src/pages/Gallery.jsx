@@ -4,32 +4,56 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import "./Gallery.css";
 
 const IMAGES = {
-  personal: [
+  gallery: [
     {
       id: 1,
-      caption: "Lost in the beauty of the misty forest 🌲🌫️",
-      photos: ["/gallery/matheran.jpg", "/gallery/matheran2.jpg"],
+      caption: "Image 1",
+      photos: ["/gallery/1.jpeg"],
     },
     {
       id: 2,
-      caption:
-        "Weekend getaway to clear my head 🌄 Sometimes inspiration strikes when you’re away from the screen.",
-      photos: ["/gallery/lonawala.jpg", "/gallery/lonawala2.jpg"],
+      caption: "Image 2",
+      photos: ["/gallery/2.jpeg"],
     },
-  ],
-  projects: [
     {
-      id: 1,
-      caption:
-        "It’s an AI-powered tool that understands what someone might be feeling based on their words.",
-      photos: ["/gallery/m.png", "/gallery/m2.jpeg"],
+      id: 3,
+      caption: "Image 3",
+      photos: ["/gallery/3.jpeg"],
     },
-  ],
-  achievements: [
     {
-      id: 1,
-      caption: "Solved 1000 LeetCode questions 🏆!",
-      photos: ["/gallery/leet.jpeg"],
+      id: 4,
+      caption: "Image 4",
+      photos: ["/gallery/4.jpeg"],
+    },
+    {
+      id: 5,
+      caption: "Image 5",
+      photos: ["/gallery/5.jpeg"],
+    },
+    {
+      id: 6,
+      caption: "Image 6",
+      photos: ["/gallery/6.jpeg"],
+    },
+    {
+      id: 7,
+      caption: "Image 7",
+      photos: ["/gallery/7.jpeg"],
+    },
+    {
+      id: 8,
+      caption: "Image 8",
+      photos: ["/gallery/8.jpeg"],
+    },
+    {
+      id: 9,
+      caption: "Image 9",
+      photos: ["/gallery/9.jpeg"],
+    },
+    {
+      id: 10,
+      caption: "Image 10",
+      photos: ["/gallery/10.png"],
     },
   ],
 };
@@ -67,7 +91,7 @@ const tabContentVariants = {
 };
 
 export default function Gallery() {
-  const [tab, setTab] = useState("personal");
+  const [tab, setTab] = useState("gallery");
   const [zoom, setZoom] = useState({ img: null, post: null, index: 0 });
 
   const openZoom = (post, index) =>
@@ -103,7 +127,7 @@ export default function Gallery() {
 
       {/* 🧭 Tabs */}
       <motion.div className="tab-buttons" variants={childVariants}>
-        {["personal", "projects", "achievements"].map((type) => (
+        {["gallery"].map((type) => (
           <motion.button
             key={type}
             className={`tab ${tab === type ? "active" : ""}`}

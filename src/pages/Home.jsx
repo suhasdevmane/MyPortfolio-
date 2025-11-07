@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 // 🖼️ Import Assets
-import photo from '../../public/photo.jpg'
+import photo from '../../public/photo.png'
 import githubLogo from '../../public/github.png'
 import linkedinLogo from '../../public/linkedin.png'
 import gmailLogo from '../../public/gmail.png'
@@ -19,13 +19,17 @@ export default function Home() {
     'Smart Buildings Researcher',
     'Conversational AI Specialist',
     'IoT & Ontology Engineer',
+    'Knowledge Engineering',
+    'DevOps Enthusiast',
+    'Full-Stack Developer',
+    'Data Analyst',
   ]
 
   const quickLinks = [
     { img: githubLogo, title: 'GitHub', link: 'https://github.com/suhasdevmane' },
     { img: linkedinLogo, title: 'LinkedIn', link: 'https://www.linkedin.com/in/suhas-devmane' },
     { img: gmailLogo, title: 'Email', link: 'mailto:suhasdevmane@outlook.com' },
-    { img: whatsappLogo, title: 'WhatsApp', link: 'https://wa.me/message' },
+    { img: whatsappLogo, title: 'WhatsApp', link: 'https://wa.me/message/+917499968836' },
     { img: instagramLogo, title: 'Instagram', link: 'https://www.instagram.com/suhasdevmane' },
     { img: facebookLogo, title: 'Facebook', link: 'https://www.facebook.com/suhasdevmane' },
   ]
@@ -230,7 +234,7 @@ export default function Home() {
             }}
           >
             {[ 
-              { label: '📍 Location', value: 'India' },
+              { label: '📍 Location', value: 'United Kingdom/India' },
               { label: '💼 Expertise', value: 'Data Engineering, AI/ML, IoT' },
               { label: '📧 Contact', value: 'devmanesp1@cardiff.ac.uk' },
             ].map((info, i) => (

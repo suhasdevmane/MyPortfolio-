@@ -1,7 +1,7 @@
-# Portfolio Transformation Guide: Kunj Desai → Suhas Devmane
+# Portfolio Transformation Guide: Suhas Devmane → Suhas Devmane
 
 ## Overview
-This document describes all changes needed to transform the portfolio from Kunj Desai to Suhas Devmane, PhD Research Fellow specializing in Smart Buildings, IoT, and Conversational AI.
+This document describes all changes needed to transform the portfolio from Suhas Devmane to Suhas Devmane, PhD Research Fellow specializing in Smart Buildings, IoT, and Conversational AI.
 
 ## ✅ Files Already Updated
 - `src/pages/Home.jsx` - Updated name, profession tags, contact links, location
@@ -10,11 +10,11 @@ This document describes all changes needed to transform the portfolio from Kunj 
 ## 📋 Remaining Files to Update
 
 ### 1. src/pages/About.jsx
-**Current:** B.Tech AI student (Kunj Desai)  
+**Current:** B.Tech AI student (Suhas Devmane)  
 **Update to:** PhD Research Fellow (Suhas Devmane)
 
 **Changes:**
-- Replace "Kunj Desai" with "Suhas Devmane"
+- Replace "Suhas Devmane" with "Suhas Devmane"
 - Update bio to: PhD Research Fellow, Data Scientist, Smart Buildings/IoT/Conversational AI expert
 - Mention Abacws project (Cardiff University smart building)
 - Mention OntoBot, BrickBot, nl2sparql projects

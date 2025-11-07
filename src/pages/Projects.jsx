@@ -6,7 +6,7 @@ const PROJECTS = [
   {
     title: '🏢 Abacws Smart Building',
     desc: 'Cardiff University Computer Science building monitoring system with integrated IoT sensors and devices for real-time environmental data collection and analysis.',
-    ss: '/abacws.png',
+    ss: '/gallery/10.png',
     tech: ['IoT', 'Sensors', 'Monitoring', 'Smart Buildings'],
     live: '#',
     code: 'https://github.com/suhasdevmane/Abacws'
@@ -14,7 +14,7 @@ const PROJECTS = [
   {
     title: '📊 Abacws Data Visualization',
     desc: 'TypeScript web application for visualizing and analyzing IoT sensor data from the Abacws smart building with interactive dashboards and real-time insights.',
-    ss: '/abacws-vis.png',
+    ss: '/gallery/19.jpg',
     tech: ['TypeScript', 'React', 'Data Viz', 'IoT'],
     live: '#',
     code: 'https://github.com/suhasdevmane/Abacws-Data-Vis'
@@ -22,7 +22,7 @@ const PROJECTS = [
   {
     title: '� OntoBot & OntobotV2',
     desc: 'Ontology-based conversational AI agents built with Jupyter Notebook, enabling intelligent querying of building data using natural language interfaces.',
-    ss: '/ontobot.png',
+    ss: '/gallery/15.png',
     tech: ['Python', 'Jupyter', 'Ontology', 'NLP'],
     live: '#',
     code: 'https://github.com/suhasdevmane/OntoBot'
@@ -30,7 +30,7 @@ const PROJECTS = [
   {
     title: '💬 BrickBot - Building Assistant',
     desc: 'Next-generation ontology-based chatbot for smart building interaction using Brick Schema, enabling intuitive natural language queries for building systems.',
-    ss: '/brickbot.png',
+    ss: '/gallery/10.png',
     tech: ['Rasa', 'Brick Schema', 'SPARQL', 'Python'],
     live: '#',
     code: 'https://github.com/suhasdevmane/Brickbot'
@@ -38,7 +38,7 @@ const PROJECTS = [
   {
     title: '🔍 nl2sparql - NL Query Engine',
     desc: 'Natural language to SPARQL query conversion system for BrickBot, enabling intuitive building data queries without requiring technical SPARQL knowledge.',
-    ss: '/nl2sparql.png',
+    ss: '/gallery/20.jpeg',
     tech: ['NLP', 'SPARQL', 'Python', 'Ontology'],
     live: '#',
     code: 'https://github.com/suhasdevmane/nl2sparql'
@@ -46,7 +46,7 @@ const PROJECTS = [
   {
     title: '💬 Talk2Abacws Survey Platform',
     desc: 'Online survey system with custom chatbot UI and 3D visualization using JavaScript and MongoDB for smart building user feedback and interaction data collection.',
-    ss: '/talk2abacws.png',
+    ss: '/gallery/17.png',
     tech: ['JavaScript', 'MongoDB', 'Chatbot', '3D Viz'],
     live: '#',
     code: 'https://github.com/suhasdevmane/talk2abacws-survey'
@@ -54,7 +54,7 @@ const PROJECTS = [
   {
     title: '🎨 Rasa Frontend UI',
     desc: 'Custom UI design supporting Rasa chatbots via webhooks with multi-media file support and IndexedDb integration for persistent chat history storage.',
-    ss: '/rasa-ui.png',
+    ss: '/gallery/18.png',
     tech: ['React', 'Rasa', 'IndexedDB', 'Webhooks'],
     live: '#',
     code: 'https://github.com/suhasdevmane/rasa-frontend'
@@ -62,15 +62,15 @@ const PROJECTS = [
   {
     title: '🔌 ThingsBoard → Cassandra Pipeline',
     desc: 'Data pipeline for streaming IoT sensor data from ThingsBoard platform to Cassandra database for scalable storage, analytics and long-term archival.',
-    ss: '/thingsboard.png',
+    ss: '/gallery/15.png',
     tech: ['Python', 'ThingsBoard', 'Cassandra', 'IoT'],
     live: '#',
     code: 'https://github.com/suhasdevmane/thingsboard_to_cassandra'
   },
   {
-    title: '� IoT Research - Human-Building Interaction',
+    title: '📚 IoT Research - Human-Building Interaction',
     desc: 'Replication package with research materials, articles, and manuals for review article "Utilising Internet of Things in Human–Building Interaction".',
-    ss: '/research.png',
+    ss: '/gallery/5.jpeg',
     tech: ['Research', 'IoT', 'HCI', 'Publications'],
     live: '#',
     code: 'https://github.com/suhasdevmane/replication_package'
@@ -78,7 +78,7 @@ const PROJECTS = [
   {
     title: '🏠 Automobile Price Prediction',
     desc: 'Machine learning regression model for predicting automobile prices using feature engineering, ensemble methods, and extensive data preprocessing.',
-    ss: '/auto-price.png',
+    ss: '/gallery/13.png',
     tech: ['Python', 'scikit-learn', 'ML', 'Regression'],
     live: '#',
     code: 'https://github.com/suhasdevmane/Automobile-Prize-Prediction'
@@ -86,7 +86,7 @@ const PROJECTS = [
   {
     title: '🩺 Heart Disease Prediction',
     desc: 'Healthcare ML classification system for predicting heart disease risk using medical datasets and multiple classification algorithms with feature analysis.',
-    ss: '/heart-disease.png',
+    ss: '/gallery/12.jpeg',
     tech: ['Python', 'ML', 'Healthcare', 'Classification'],
     live: '#',
     code: 'https://github.com/suhasdevmane/Heart-Disease-Practice'
@@ -94,7 +94,7 @@ const PROJECTS = [
   {
     title: '🐕 Dog Breed Identification',
     desc: 'Multi-class image classification system using convolutional neural networks and transfer learning for accurate dog breed identification from images.',
-    ss: '/dog-breed.png',
+    ss: '/gallery/11.jpeg',
     tech: ['TensorFlow', 'CNN', 'Deep Learning', 'Python'],
     live: '#',
     code: 'https://github.com/suhasdevmane/dog-breed-identification'
