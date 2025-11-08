@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Github, ExternalLink } from 'lucide-react'
 
@@ -102,6 +102,39 @@ const PROJECTS = [
 ]
 
 export default function Projects() {
+  const [activeTab, setActiveTab] = useState('featured')
+
+  const REPOS = [
+    { title: 'rasa', desc: 'Built conversational AI applications using the open-source Rasa framework, focusing on text and voice-based NLU, dialogue management, and integration with channels like Slack and Facebook.', repo: 'rasa' },
+    { title: 'TechWebDots', desc: 'Developed and deployed a sample web application hosted on Microsoft Azure, demonstrating cloud-native web development using CSS and modern frontend practices.', repo: 'TechWebDots' },
+    { title: 'Automobile-Prize-Prediction', desc: 'Implemented ML models to predict automobile prices using data-driven approaches, dataset analysis, and statistical modeling to inform predictive outcomes.', repo: 'Automobile-Prize-Prediction' },
+    { title: 'Python-Basics-and-libraries', desc: 'Compiled and practiced Python programming essentials, including fundamental data structures, variables, and common libraries for enhanced data science workflows.', repo: 'Python-Basics-and-libraries' },
+    { title: 'desktop-tutorial', desc: 'Explored collaborative development workflows utilizing GitHub Desktop, demonstrating effective source control in team settings.', repo: 'desktop-tutorial' },
+    { title: 'mortarv1', desc: 'Experimented with Go language in developing core functionalities for project scaffolding and automation, under BSD licensing.', repo: 'mortarv1' },
+    { title: 'Conversational-AI-with-RASA', desc: 'Applied the RASA AI framework to create advanced conversational bots, leveraging published best practices in dialogue management and custom actions.', repo: 'Conversational-AI-with-RASA' },
+    { title: 'rasa-action-server-gha', desc: 'Automated Docker image preparation for Rasa custom action servers via GitHub Actions to streamline deployment processes.', repo: 'rasa-action-server-gha' },
+    { title: 'brick-data-retrieval-demo', desc: 'Demonstrated building data retrieval pipelines using Brick schema standards for smart building applications.', repo: 'brick-data-retrieval-demo' },
+    { title: 'Mercedes-Benz', desc: 'Conducted manufacturing data analysis using Kaggle datasets, optimizing predictive models for Mercedes-Benz production scenarios.', repo: 'Mercedes-Benz' },
+    { title: 'machine-learning', desc: 'Compiled a collection of datasets and Jupyter notebooks for hands-on machine learning experiments, covering classification, regression, and clustering tasks.', repo: 'machine-learning' },
+    { title: 'rasa-for-beginners', desc: 'Created NLU-driven conversational bots introducing beginners to Rasa technologies and conversational design principles.', repo: 'rasa-for-beginners' },
+    { title: 'Neighborhood-in-new-york', desc: 'Analyzed and clustered New York neighborhood data, applying unsupervised learning techniques for actionable urban analytics.', repo: 'Neighborhood-in-new-york' },
+    { title: 'healthcare-project', desc: 'Designed analytics projects targeting healthcare industry challenges, employing machine learning for improved health insights.', repo: 'healthcare-project' },
+    { title: 'DS-practice-capstone-', desc: 'Completed a capstone project synthesizing practical data science techniques and project delivery methodologies.', repo: 'DS-practice-capstone-' },
+    { title: 'neighbourhood-in-toronto', desc: 'Addressed real-world ML problems through Toronto neighborhood data, focusing on segmentation and clustering for urban planning.', repo: 'neighbourhood-in-toronto' },
+    { title: 'Customer-Service-Request-Analysis', desc: 'Executed data-driven analysis for NYC 311 customer service requests, leveraging the Kaggle platform for practical assessment and reporting.', repo: 'Customer-Service-Request-Analysis' },
+    { title: 'loan-prediction', desc: 'Developed and validated predictive models for loan approvals in the banking domain, optimizing for classification performance.', repo: 'loan-prediction' },
+    { title: 'House-sales-in-king-count', desc: 'Analyzed housing market data using Python and ML algorithms to predict sales prices and uncover market trends.', repo: 'House-sales-in-king-count' },
+    { title: 'Machine-Learning-Regression', desc: 'Explored various regression algorithms and their applications to real-world datasets, with a focus on interpretation and model selection.', repo: 'Machine-Learning-Regression' },
+    { title: 'Heart-Disease-Practice', desc: 'Practiced solving ML classification problems in healthcare, specifically focusing on heart disease dataset analysis and model validation.', repo: 'Heart-Disease-Practice' },
+    { title: 'dog-breed-identification', desc: 'Implemented image classification models to recognize multiple dog breed classes in practice ML workflows.', repo: 'dog-breed-identification' },
+    { title: 'DB2-SQL-AND-PYTHON', desc: 'Integrated DB2 cloud database operations with Python scripting to demonstrate advanced database manipulation and automation.', repo: 'DB2-SQL-AND-PYTHON' },
+    { title: 'Python-ML-data-Visulization', desc: 'Created data visualization projects that provide quick, meaningful insights into analyzed datasets using Python visualization libraries.', repo: 'Python-ML-data-Visulization' },
+    { title: 'Comcast-Consumer-Complaints', desc: 'Analyzed Comcast consumer complaints data, identifying trends and providing actionable business insights through data science.', repo: 'Comcast-Consumer-Complaints' },
+    { title: 'Machine-learning-classification', desc: 'Implemented standard and advanced ML classification algorithms, comparing approaches across various datasets.', repo: 'Machine-learning-classification' },
+    { title: 'Bulldozer-price-regression-project', desc: 'Predicted sales prices of bulldozers using Kaggle challenge data, applying regression models and feature engineering techniques.', repo: 'Bulldozer-price-regression-project' },
+    { title: 'Coursera_Capstone', desc: 'Completed the IBM Coursera Capstone Project, demonstrating applied skills in project-based data science.', repo: 'Coursera_Capstone' },
+    { title: 'Coursera_Project', desc: 'Uploaded additional project files developed for Coursera courses, showcasing a variety of practical data science and ML assignments.', repo: 'Coursera_Project' }
+  ]
   return (
     <motion.section
       className="container"
@@ -119,10 +152,35 @@ export default function Projects() {
         >
           🚀 Research & Projects
         </motion.h2>
-        <p className="text-gray-400 mb-10">
+        <p className="text-gray-400 mb-6">
           A collection of my research work and technical projects — blending IoT, conversational AI, and data science innovation.
         </p>
 
+        {/* Tabs */}
+        <div style={{ display: 'flex', gap: 8, marginBottom: 16, overflowX: 'auto' }}>
+          {[
+            { key: 'featured', label: 'Featured' },
+            { key: 'repos', label: 'Repositories & Courses' }
+          ].map((t) => (
+            <button
+              key={t.key}
+              onClick={() => setActiveTab(t.key)}
+              style={{
+                whiteSpace: 'nowrap',
+                padding: '8px 12px',
+                borderRadius: 10,
+                border: activeTab === t.key ? '1px solid rgba(0,255,255,0.4)' : '1px solid rgba(255,255,255,0.08)',
+                background: activeTab === t.key ? 'rgba(0,255,255,0.1)' : 'rgba(255,255,255,0.03)',
+                color: activeTab === t.key ? '#67e8f9' : '#cbd5e1',
+                cursor: 'pointer'
+              }}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
+        {activeTab === 'featured' && (
         <div className="projects-grid" style={{ display: 'grid', gap: 24, gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
           {PROJECTS.map((p, idx) => (
             <motion.div
@@ -224,6 +282,51 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
+        )}
+
+        {activeTab === 'repos' && (
+          <div className="projects-grid" style={{ display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
+            {REPOS.map((r, idx) => (
+              <motion.div
+                key={idx}
+                className="project-card"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                style={{
+                  background: 'linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.9))',
+                  border: '1px solid rgba(0,255,255,0.1)',
+                  borderRadius: 14,
+                  padding: 16
+                }}
+              >
+                <h3 style={{ fontSize: 16, color: '#67e8f9', marginBottom: 8 }}>{r.title}</h3>
+                <p style={{ fontSize: 14, color: '#cbd5e1', lineHeight: 1.6 }}>{r.desc}</p>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 10 }}>
+                  <a
+                    href={`https://github.com/suhasdevmane/${r.repo}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 6,
+                      padding: '6px 10px',
+                      borderRadius: 8,
+                      border: '1px solid rgba(0,255,255,0.15)',
+                      color: '#0ea5e9',
+                      textDecoration: 'none',
+                      background: 'rgba(255,255,255,0.05)'
+                    }}
+                  >
+                    <Github size={14} /> View Repo
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
     </motion.section>
   )
