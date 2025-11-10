@@ -48,24 +48,24 @@ const CERTS = {
   tech: [
     {
       title: "Agentic AI",
-      org: "Flipkart",
-      date: "2022",
+      org: "Google Developers",
+      date: "2025",
       img: "/certs/in-progress.jpg",
       link: "/certs/in-progress.jpg",
     },
     {
       title: "RAG Solution Challenge",
       org: "Google Developers",
-      date: "2023",
-      img: "/certs/hack2skill.png",
-      link: "/certs/hack2skill.png",
+      date: "2025",
+      img: "/certs/in-progress.jpg",
+      link: "/certs/in-progress.jpg",
     },
     {
       title: "LANGCHAIN Hackathon",
       org: "SCET AI Club",
       date: "2025",
-      img: "/certs/adira.png",
-      link: "/certs/adira.png",
+      img: "/certs/in-progress.jpg",
+      link: "/certs/in-progress.jpg",
     },
     // include the PDF certificates in tech as well (optional):
     ...allCerts,
