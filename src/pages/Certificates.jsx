@@ -50,8 +50,8 @@ const CERTS = {
       title: "Agentic AI",
       org: "Flipkart",
       date: "2022",
-      img: "/certs/flipkart.jpg",
-      link: "/certs/flipkart.jpg",
+      img: "/certs/in-progress.jpg",
+      link: "/certs/in-progress.jpg",
     },
     {
       title: "RAG Solution Challenge",
