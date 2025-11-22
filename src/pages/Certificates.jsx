@@ -33,6 +33,7 @@ const CERT_FILES = [
   "TensorFlow Developer.jpg",
   "TensorFlow for Artificial Intelligence Machine Learning and Deep Learning.jpg",
   "Tools for Data Science.jpg",
+  
 ];
 
 const allCerts = CERT_FILES.map((file) => ({
@@ -170,7 +171,7 @@ export default function Certificates() {
                   </div>
                 ) : (
                   <img
-                    src={c.img}
+                    src={encodeURI(c.img)}
                     alt={c.title}
                     style={{
                       width: "100%",
@@ -245,14 +246,14 @@ export default function Certificates() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <iframe
-                  src={selectedCert.link}
+                  src={encodeURI(selectedCert.link)}
                   title={selectedCert.title}
                   style={{ width: "100%", height: "100%", border: "none" }}
                 />
               </motion.div>
             ) : (
               <motion.img
-                src={selectedCert.img}
+                src={encodeURI(selectedCert.img)}
                 alt={selectedCert.title}
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
