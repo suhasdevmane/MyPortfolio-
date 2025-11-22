@@ -153,36 +153,62 @@ export default function Certificates() {
                   <div
                     style={{
                       width: "100%",
-                      height: 160,
-                      borderRadius: 10,
-                      background: "linear-gradient(135deg,#222,#111)",
+                      aspectRatio: "4 / 3",
+                      borderRadius: 12,
+                      background: "linear-gradient(135deg,#1f2937,#111)",
                       color: "#fff",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      marginBottom: 12,
+                      marginBottom: 14,
                       flexDirection: "column",
-                      padding: 8,
+                      padding: 12,
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      boxShadow: "0 0 0 1px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.4)",
                       textAlign: "center",
                     }}
                   >
-                    <div style={{ fontSize: 28, fontWeight: 700 }}>PDF</div>
-                    <div style={{ fontSize: 12, color: "#bbb", marginTop: 8, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", width: "100%" }}>{c.title}</div>
+                    <div style={{ fontSize: 26, fontWeight: 600, letterSpacing: 0.5 }}>PDF</div>
+                    <div style={{ fontSize: 12, color: "#cbd5e1", marginTop: 8, overflow: "hidden", textOverflow: "ellipsis", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>{c.title}</div>
                   </div>
                 ) : (
-                  <img
-                    src={encodeURI(c.img)}
-                    alt={c.title}
+                  <div
                     style={{
                       width: "100%",
-                      height: 160,
-                      borderRadius: 10,
-                      objectFit: "cover",
-                      marginBottom: 12,
+                      aspectRatio: "4 / 3",
+                      background: "#1a1a1a",
+                      borderRadius: 12,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: 14,
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      boxShadow: "0 0 0 1px rgba(0,0,0,0.6), 0 4px 10px rgba(0,0,0,0.35)",
                     }}
-                  />
+                  >
+                    <img
+                      src={encodeURI(c.img)}
+                      alt={c.title}
+                      loading="lazy"
+                      onError={(e) => {
+                        if (!e.target.dataset.fallback) {
+                          e.target.dataset.fallback = 'true';
+                          e.target.src = '/certs/in-progress.jpg';
+                        }
+                      }}
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        objectFit: 'contain',
+                        padding: 6,
+                        filter: 'brightness(0.92)',
+                        transition: 'transform 0.3s',
+                      }}
+                    />
+                  </div>
                 )}
-                <strong style={{ fontSize: 16 }}>{c.title}</strong>
+                <strong style={{ fontSize: 15, display: 'block', lineHeight: 1.3, maxHeight: 42, overflow: 'hidden' }}>{c.title}</strong>
                 <div className="muted" style={{ fontSize: 13, color: "#bbb" }}>
                   {c.org} • {c.date}
                 </div>
@@ -248,24 +274,38 @@ export default function Certificates() {
                 <iframe
                   src={encodeURI(selectedCert.link)}
                   title={selectedCert.title}
-                  style={{ width: "100%", height: "100%", border: "none" }}
+                  style={{ width: "100%", height: "100%", border: "none", background: '#fff' }}
                 />
               </motion.div>
             ) : (
-              <motion.img
-                src={encodeURI(selectedCert.img)}
-                alt={selectedCert.title}
-                initial={{ scale: 0.8 }}
+              <motion.div
+                initial={{ scale: 0.85 }}
                 animate={{ scale: 1 }}
-                exit={{ scale: 0.8 }}
+                exit={{ scale: 0.85 }}
                 style={{
-                  maxWidth: "90%",
-                  maxHeight: "85%",
-                  borderRadius: 10,
-                  boxShadow: "0 0 25px rgba(255,255,255,0.2)",
+                  maxWidth: '92%',
+                  maxHeight: '88%',
+                  background: '#111',
+                  padding: 12,
+                  borderRadius: 14,
+                  boxShadow: '0 0 0 1px rgba(255,255,255,0.08), 0 10px 30px rgba(0,0,0,0.55)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
                 }}
                 onClick={(e) => e.stopPropagation()}
-              />
+              >
+                <img
+                  src={encodeURI(selectedCert.img)}
+                  alt={selectedCert.title}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '100%',
+                    objectFit: 'contain',
+                    filter: 'brightness(0.95)'
+                  }}
+                />
+              </motion.div>
             )}
           </motion.div>
         )}
