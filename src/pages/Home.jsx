@@ -267,6 +267,65 @@ export default function Home() {
         </motion.div>
       </div>
 
+      {/* --- Introduction Video --- */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        style={{
+          width: '100%',
+          maxWidth: '900px',
+          textAlign: 'center',
+        }}
+      >
+        <h2
+          style={{
+            fontSize: '1.6rem',
+            marginBottom: '1rem',
+            background: 'linear-gradient(90deg, var(--accent), var(--accent-2))',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+          }}
+        >
+          🎬 Watch My Introduction
+        </h2>
+        <div
+          style={{
+            position: 'relative',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            border: '2px solid var(--accent)',
+            boxShadow: '0 0 35px rgba(0,255,200,0.18)',
+          }}
+        >
+          <video
+            controls
+            preload="none"
+            poster={photo}
+            playsInline
+            style={{
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+              background: '#000',
+            }}
+          >
+            <source src="/videos/landscape.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p
+          style={{
+            fontSize: '0.9rem',
+            color: 'rgba(255,255,255,0.6)',
+            marginTop: '0.6rem',
+          }}
+        >
+          A short introduction to who I am and what I do.
+        </p>
+      </motion.div>
+
 
       {/* --- Bottom Quick Links --- */}
       <motion.div
